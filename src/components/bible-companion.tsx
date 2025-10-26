@@ -195,10 +195,12 @@ export function BibleCompanion() {
             <CardTitle className="font-headline text-2xl">{selectedBook} {selectedChapter}</CardTitle>
           </CardHeader>
           <CardContent>
-            <div 
-              className="text-base font-body text-foreground/90 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: formattedExplanation }}
-            />
+             <ScrollArea className="h-[40vh] md:h-auto">
+              <div 
+                className="text-base font-body text-foreground/90 leading-relaxed pr-4"
+                dangerouslySetInnerHTML={{ __html: formattedExplanation }}
+              />
+            </ScrollArea>
           </CardContent>
         </Card>
       )}
